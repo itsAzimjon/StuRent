@@ -154,7 +154,12 @@
                                     <span>Dashboard</span></a
                                 >
                             </li>
-                            
+                            <li class="{{ (request()->route()->uri=='admin/home' ? 'active' : '') }}">
+                                <a href="/admin/home"
+                                    ><i class="feather-home"></i>
+                                    <span>{{__('key.uy')}}</span></a
+                                >
+                            </li>
                             <li class="{{ (request()->route()->uri=='admin/category' ? 'active' : '') }}">
                                 <a href="/admin/category"
                                     ><i class="feather-package"></i>

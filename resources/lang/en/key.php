@@ -56,5 +56,11 @@ return [
     'ijarachi'=>"Tenant Name",
     'ijarachi_tel'=>"Tenant Phone",
     'kimga'=>"For whom",
+    'close'=>"Close",
+    'sorov1'=>"Yes, I found my tenants",
+    'sorov2'=>"And I couldn't find my tenants",
+    'sorov3'=>"I managed to find tenants, but not completely",
+    'uy'=>"Apartments",
+    'faol'=>"It's in the ad"
 
 ];

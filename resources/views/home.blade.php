@@ -31,7 +31,7 @@
             
             <div class="property-card">
               <div class="property-card__thumb" style="overflow: hidden;">
-                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="height: 200px">
+                <div id="carouselExampleControls{{$elon->id}}" class="carousel slide" data-bs-ride="carousel"  data-bs-interval="false" style="height: 200px">
                   <div class="carousel-inner">
                     <?php $aa=0;?>
                     @foreach(json_decode($elon->rasm) as $ra)
@@ -48,11 +48,11 @@
                     @endif
                     @endforeach
                   </div>
-                  <button style="background: none;" class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                  <button style="background: none;" class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls{{$elon->id}}" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                   </button>
-                  <button style="background: none;" class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                  <button style="background: none;" class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls{{$elon->id}}" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                   </button>
@@ -125,20 +125,19 @@
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="type" id="kim1" value="1" checked="">
                 <label class="form-check-label" for="kim1">
-                  Ha men o’z ijarachilarimni topdim
+                  {{__('key.sorov1')}}
                 </label>
             </div>
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="type" id="kim2" value="2">
                 <label class="form-check-label" for="kim2">
-                  Yoq men ijarachilarimni topa olmadim
+                  {{__('key.sorov2')}}
                 </label>
             </div>
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="type" id="kim3" value="3">
                 <label class="form-check-label" for="kim3">
-                  Ijarachilarni topa oldim lekin to’liq emas
-
+                    {{__('key.sorov3')}}
                 </label>
             </div>
           </div>

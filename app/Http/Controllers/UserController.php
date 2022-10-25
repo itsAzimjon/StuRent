@@ -25,6 +25,8 @@ class UserController extends Controller
             $elon=$elon->where('narx','>=',$request->min_price);
         if(!empty($request->max_price))
             $elon=$elon->where('narx','<=',$request->max_price);
+        if(!empty($request->kimga))
+            $elon=$elon->where('kimga',$request->kimga)->orwhere('kimga',1);
         $elon = $elon->get();
         return view('search',['category'=>$category,'shaxar'=>$Shaxar,'elons'=>$elon,'s_c'=>$request->category,'min'=>$request->min_price,'max'=>$request->max_price]);
     }

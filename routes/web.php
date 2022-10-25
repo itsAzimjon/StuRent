@@ -58,6 +58,8 @@ Route::middleware([LangMiddleware::class])->group(function () {
         Route::post('/mahalla/save', 'MahallaController@save');
         Route::post('/mahalla/edit/{id}', 'MahallaController@edit');
         Route::post('/mahalla/delete/{id}', 'MahallaController@delete');
+        Route::get('/home', 'AdminController@home');
+
 
 
     });

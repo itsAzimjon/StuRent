@@ -136,7 +136,24 @@
                 </div>
               </div>
             </div>
+            <div class="action-widget mt-4">
+              <h6 class="action-widget__title"><font style="color: green">{{__("key.qulay")}}</font>  {{__("key.filter")}}</h6>
+              <div class="action-widget__body">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="kimga" id="kim2" value="2">
+                    <label class="form-check-label" for="kim2">
+                        {{__('key.bollar')}}
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="kimga" id="kim3" value="3">
+                    <label class="form-check-label" for="kim3">
+                        {{__('key.qizlar')}}
 
+                    </label>
+                </div>
+              </div>
+            </div>
             <div class="action-widget mt-4">
               <h6 class="action-widget__title"><font style="color: green">{{__("key.narxlar")}}</font>  {{__("key.filter")}}</h6>
               <div class="action-widget__body">
@@ -200,7 +217,7 @@
             
             <div class="property-card">
               <div class="property-card__thumb" style="overflow: hidden;">
-                <div id="carouselExampleControls" class="carousel" style="height: 200px">
+                <div id="carouselExampleControls{{$elon->id}}" class="carousel slide" data-bs-interval="false" data-bs-ride="carousel" style="height: 200px">
                   <div class="carousel-inner">
                     <?php $aa=0;?>
                     @foreach(json_decode($elon->rasm) as $ra)
@@ -217,11 +234,11 @@
                     @endif
                     @endforeach
                   </div>
-                  <button style="background: none;" class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                  <button style="background: none;" class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls{{$elon->id}}" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                   </button>
-                  <button style="background: none;" class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                  <button style="background: none;" class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls{{$elon->id}}" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                   </button>

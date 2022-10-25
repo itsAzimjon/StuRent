@@ -56,7 +56,12 @@ return [
     'ijarachi'=>"Ijarachi ismi",
     'ijarachi_tel'=>"Ijarachi Telefoni",
     'kimga'=>"Kimlar uchun",
-
+    'close'=>"Yopish",
+    'sorov1'=>"Ha men o’z ijarachilarimni topdim",
+    'sorov2'=>"Yoq men ijarachilarimni topa olmadim",
+    'sorov3'=>"Ijarachilarni topa oldim lekin to’liq emas",
+    'uy'=>"Kvaratiralar",
+    'faol'=>"Elonda bor"
 
 
 
