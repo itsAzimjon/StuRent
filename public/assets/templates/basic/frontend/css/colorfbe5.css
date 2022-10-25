@@ -1,0 +1,51 @@
+
+.bg--base {
+    background-color: #e9e62c !important;
+}
+
+.property-details-meta li i, .hero-list-item-list .single i, .property-card .price, .property-card .property-meta li i, .read-more,.new-list-card__footer .price, a:hover, .link-list li a:hover {
+    color: green;
+}
+
+.btn--base, .btn--base:hover, .property-card__thumb .property-badge, .subscribe-form .subscribe-form-btn, .footer-widget .social-link-list li a, .card-view-btn-area button.active, .pagination .page-item.active .page-link, .custom-file-upload::after, .property-card__thumb .property-badge::after, .custom--nav-tabs.style--two .nav-item .nav-link.active::after, .blog-details__thumb .post__date .date, .sidebar .widget .widget__title::after, .custom--accordion .accordion-button:not(.collapsed), .preloader .preloader-container .animated-preloader, .preloader .preloader-container .animated-preloader:before, .select2-container--default .select2-results__option--highlighted[aria-selected], .details-thumb-slider .slick-arrow:hover, .blog-details__footer .social__links li a:hover {
+    background-color: green;
+}
+.property-card__thumb .property-badge::before {
+    border-color: transparent #e9e62cef transparent transparent;
+}
+.pagination .page-item .page-link {
+    border-color: #e9e62c25;
+}
+.custom--accordion .accordion-item {
+    border-color: #e9e62c50;
+}
+
+.custom--accordion .accordion-button {
+    background-color: #e9e62c05;
+}
+
+.text--base {
+    color: #e9e62c !important;
+}
+.pagination .page-item .page-link:hover {
+    background-color: #e9e62c;
+    border-color: #e9e62c;
+    color: #fff;
+}
+.box--border {
+    border: 4px solid #e9e62c8c;
+}
+
+.header.menu-fixed .header__bottom, .hero-list-item, .main-search-area, .footer__bottom::after, .footer::before, .search-area {
+    background-color: white;
+}
+
+.form--control:focus {
+    border-color: #e9e62c !important;
+    box-shadow: 0 0 5px #e9e62c35;
+}
+
+
+a.text-white:hover {
+    color: #e9e62c !important;
+}
