@@ -121,7 +121,7 @@
                                     <p class="text-muted mb-0">Administrator</p>
                                 </div>
                             </div>
-                            <a class="dropdown-item" href="/my"
+                            <a class="dropdown-item" href="/home"
                                 ><i class="feather-user me-1"></i>Admindan chiqish</a
                             >
                             {{-- <a class="dropdown-item" href="profile.html"

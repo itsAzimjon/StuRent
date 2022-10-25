@@ -92,7 +92,23 @@
                 
               </div>
               <div class="nav-right">
-                <a href="/my" class="btn btn-sm btn--success w-100">{{__('key.login')}}</a>
+                @guest
+                <a href="/home" class="btn btn-sm btn--success w-100">{{__('key.login')}}</a>
+                @else
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" style="background: gray;" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i  class="las la-user"></i>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/home">{{__('key.login')}}</a></li>
+                    <li><button class="dropdown-item"  onclick="event.preventDefault();
+                      document.getElementById('logout-form').submit();">Logout</button></li>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
+                  </ul>
+                </div>
+                @endguest
               </div>
 
             </div>

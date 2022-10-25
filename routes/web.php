@@ -38,10 +38,10 @@ Route::middleware([LangMiddleware::class])->group(function () {
     Route::post('/add/save', 'HomeController@save');
     Route::middleware(['auth'])->group(function () {
         Route::get('/add',  'UserController@add');
-
-        Route::get('/my', function () {
-            return view('my');
-        });
+        Route::get('/rasm/delete/{id}/{index}',  'UserController@rasm_delete');
+        Route::get('/edit/{id}',  'UserController@edit');
+        Route::post('/edit/save/{id}',  'HomeController@esave');
+        Route::post('/delete/{id}',  'UserController@delete');
     });
 
     Route::prefix('/admin')->middleware(['auth'])->group(function () {

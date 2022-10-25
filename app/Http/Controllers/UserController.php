@@ -78,5 +78,35 @@ class UserController extends Controller
 
 
     }
+    function edit($id,Request $request)
+    {
+        $Shaxar=Shaxar::with('mahalla')->get();
+        $category=Category::all();
+        $elon=Elon::where('id',$id)->with('qulaylik')->first();
+        if($request->user()->id!=$elon->user_id){
+            return back();
+        }
+        return view('edit',['category'=>$category,
+            'shaxar'=>$Shaxar,
+            'elon'=>$elon,
+            'mahalla'=>Mahalla::where('shaxar_id',$elon->shaxar_id)->get()
+        ]);
+    }
+    public function rasm_delete($id,$index)
+    {
+        $elon=Elon::where('id',$id)->with('qulaylik')->first();
+        $rasm=json_decode($elon->rasm);
+        unset($rasm[$index]);
+        $elon->rasm=json_encode($rasm);
+        $elon->save();
+        return back();
+    }
+    function delete($id,Request $request)
+    {
+        $elon=Elon::where('id',$id)->with('qulaylik')->first();
+        $elon->type=$request->type;
+        $elon->save();
+        return back();
+    }
     
 }

@@ -200,7 +200,7 @@
             
             <div class="property-card">
               <div class="property-card__thumb" style="overflow: hidden;">
-                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="height: 200px">
+                <div id="carouselExampleControls" class="carousel" style="height: 200px">
                   <div class="carousel-inner">
                     <?php $aa=0;?>
                     @foreach(json_decode($elon->rasm) as $ra)

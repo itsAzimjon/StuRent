@@ -3,7 +3,7 @@
 @section('content')
 <div class="page-wrapper">
     {{-- hozircha bosh --}}
-    <div class="content container-fluid pb-0">
+    {{-- <div class="content container-fluid pb-0">
         <h4 class="mb-3">Overview</h4>
         <div class="row">
             <div class="col-xl-3 col-sm-6 col-12">
@@ -3924,6 +3924,6 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 </div>
 @endsection

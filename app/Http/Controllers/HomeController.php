@@ -81,4 +81,52 @@ class HomeController extends Controller
 
         return redirect('/home');
     }
+    public function esave(Request $request,$id)
+    {
+        $this->validate($request,[
+            'mulk_turi'=> 'required',
+            'mahalla_id'=> 'required',
+            'talaba_soni'=> 'required',
+            'narx'=> 'required',
+            'xona_soni'=> 'required',
+            'kimga'=> 'required',
+            'shaxar_id'=> 'required',
+            'izoh'=> 'required',
+            'name'=> 'required',
+            'phone'=> 'required',
+            'malumot'=> 'required',
+           
+        ]);
+        $elon=Elon::where('id',$id)->first();
+        $rr=(array)json_decode($elon->rasm);
+        foreach($request->rasm??[] as $rasm){
+            $name= time().$rasm->getClientOriginalName();
+            $a =  $rasm->move(public_path('rasmlar/'.$request->user()->id."/"), $name);
+            $rr[]="rasmlar/".$request->user()->id."/".$name;
+
+        }
+        
+        // dd(json_encode($rr));
+        $name=[
+            'mulk_turi'=>$request->mulk_turi,
+            'mahalla_id'=>$request->mahalla_id,
+            'talaba_soni'=>$request->talaba_soni,
+            'narx'=>$request->narx,
+            'xona_soni'=>$request->xona_soni,
+            'rasm'=>json_encode($rr),
+            'kimga'=>$request->kimga,
+            'malumoti'=>json_encode($request->malumot),
+            'phone'=>$request->phone,
+            'name'=>$request->name,
+            'izoh'=>$request->izoh,
+            'shaxar_id'=>$request->shaxar_id,
+            'user_id'=>$request->user()->id,
+        ];
+        $elon=Elon::where('id',$id)->update($name);
+        Malumotlar::where('elon_id',$id)->delete();
+        foreach($request->malumot as $m){
+            Malumotlar::create(['elon_id'=>$id,'categories_id'=>$m]);
+        }
+        return redirect('/home');
+    }
 }

@@ -57,7 +57,12 @@
                     <span class="visually-hidden">Next</span>
                   </button>
                 </div>
-                <div class="property-status"><a href="/delete/{{$elon->id}}">{{__('key.delete')}}</a></div>
+                <div class="property-status" style="z-index:88099;">
+                  <button  data-bs-toggle="modal" data-bs-target="#modal{{$elon->id}}">
+                    {{__('key.delete')}}
+                  </button>
+                  
+                </div>
                 <div style="font-size: 12px;
                 position: absolute;
                 top: 10px;
@@ -65,6 +70,7 @@
                 padding: 0 10px;
                 background-color: #fff;
                 color: #777;
+                z-index:88099;
                 border-radius: 999px;">
                     <a href="/edit/{{$elon->id}}">{{__('key.edit')}}</a>
                 </div>
@@ -94,10 +100,57 @@
             </a>
             </div>
           </div>
+          
           @endforeach
         </div>
       </div>
     </div>
   </div>
 </section>
+
 @stop 
+@section('js')
+@foreach($elons as $elon)
+<div class="modal fade" id="modal{{$elon->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">{{__('key.delete')}}e</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="/delete/{{$elon->id}}" method="post">
+          @csrf
+          <div class="form-group c">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="type" id="kim1" value="1" checked="">
+                <label class="form-check-label" for="kim1">
+                  Ha men o’z ijarachilarimni topdim
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="type" id="kim2" value="2">
+                <label class="form-check-label" for="kim2">
+                  Yoq men ijarachilarimni topa olmadim
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="type" id="kim3" value="3">
+                <label class="form-check-label" for="kim3">
+                  Ijarachilarni topa oldim lekin to’liq emas
+
+                </label>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{__('key.close')}}</button>
+            <button type="submit" class="btn btn-primary">{{__('key.delete')}}</button>
+          </div>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+</div>
+@endforeach
+@stop
