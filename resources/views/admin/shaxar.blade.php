@@ -125,7 +125,7 @@
                                                 <div class="modal-body">
                                                     <form
                                                     method="POST"
-                                                        action="/admin/city/edit/{{$city->id}}"
+                                                        action="/admin/shaxar/edit/{{$city->id}}"
                                                     >
                                                     @csrf
                                                         <div class="add-wrap">
@@ -242,7 +242,7 @@
                                                 <div class="modal-body">
                                                     <form
                                                     method="POST"
-                                                        action="/admin/city/delete/{{$city->id}}"
+                                                        action="/admin/shaxar/delete/{{$city->id}}"
                                                     >
                                                     @csrf
                                                         <div class="delete-wrap text-center">
