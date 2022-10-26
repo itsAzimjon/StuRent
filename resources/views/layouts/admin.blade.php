@@ -52,7 +52,7 @@
                         <img src="{{ asset('logo.png')}}" alt="logo" />
                     </a>
                     <a href="index.html" class="logo logo-small">
-                        <font style="font-size:2rem;">Z</font>
+                        <font style="font-size:2rem;">S</font>
                         {{-- <img
                             src="{{ asset('asl_admin/img/logo-small.png')}}"
                             alt="Logo"
