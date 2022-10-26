@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\LangMiddleware;
+use App\Http\Middleware\AdminMiddleware;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,7 +45,7 @@ Route::middleware([LangMiddleware::class])->group(function () {
         Route::post('/delete/{id}',  'UserController@delete');
     });
 
-    Route::prefix('/admin')->middleware(['auth'])->group(function () {
+    Route::prefix('/admin')->middleware(['auth',AdminMiddleware::class])->group(function () {
         Route::get('/', 'AdminController@index');
         Route::get('/category', 'CategoryController@index');
         Route::post('/category/save', 'CategoryController@save');
