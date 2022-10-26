@@ -22,12 +22,13 @@ class UserController extends Controller
         if(!empty($request->mulk_turi))
             $elon=$elon->where('mulk_turi',$request->mulk_turi);
         if(!empty($request->min_price))
-            $elon=$elon->where('narx','>=',$request->min_price);
+            $elon=$elon->where('narx','>=',(int)$request->min_price);
         if(!empty($request->max_price))
-            $elon=$elon->where('narx','<=',$request->max_price);
+            $elon=$elon->where('narx','<=',(int)$request->max_price);
         if(!empty($request->kimga))
             $elon=$elon->where('kimga',$request->kimga)->orwhere('kimga',1);
         $elon = $elon->get();
+        // dd($request->min_price);
         return view('search',['category'=>$category,'shaxar'=>$Shaxar,'elons'=>$elon,'s_c'=>$request->category,'min'=>$request->min_price,'max'=>$request->max_price]);
     }
     public function search_city(Request $request)
