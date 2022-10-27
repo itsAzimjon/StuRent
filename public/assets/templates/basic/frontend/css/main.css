@@ -2265,12 +2265,12 @@ label {
     -o-border-radius: 3px;
 }
 .language-select option {
-    background-color: #002046;
+    background-color: #009273;
     color: #fff;
 }
 @media (max-width: 1199px) {
     .navbar-collapse {
-        background-color: #071e3e;
+        background-color: #009273;
         padding: 0 1.875rem 1.25rem 1.875rem;
     }
 }
@@ -2297,6 +2297,7 @@ label {
     box-shadow: none;
 }
 .menu-toggle {
+    color: #009273;
     margin: 10px 0;
     position: relative;
     display: block;
@@ -2306,7 +2307,7 @@ label {
     background: transparent;
     border-top: 2px solid;
     border-bottom: 2px solid;
-    color: #ffffff;
+    /* color: #ffffff; */
     font-size: 0;
     -webkit-transition: all 0.25s ease-in-out;
     -o-transition: all 0.25s ease-in-out;
@@ -2334,7 +2335,7 @@ label {
 }
 @media (max-width: 1199px) {
     .menu-toggle:before, .menu-toggle:after {
-        background-color: #ffffff;
+        background-color: #009273;
     }
 }
 .animated {
