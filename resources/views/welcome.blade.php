@@ -124,7 +124,7 @@
           <div class="row justify-content-center">
             <div class="col-lg-6 text-center">
               <h2 class="page-title">
-                {{__('key.home1')}} <font style="color: green"> {{__('key.home2')}}</font>
+                {{__('key.home1')}} <font style="color: #009273"> {{__('key.home2')}}</font>
               </h2>
               <ul class="page-list justify-content-center">
                 <li>
@@ -145,13 +145,13 @@
         <div class="container pt-50">
           <div class="row">
            <div class="col-sm-12 col-lg-1">
-            <i style="font-size: 5rem;color:green;" class="las la-door-open"></i>
+            <i style="font-size: 5rem;color:#009273;" class="las la-door-open"></i>
            </div>
            <div class="col-sm-12 col-lg-5">
             <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero rerum a iusto quas quaerat tempora veritatis laudantium, ipsam mollitia saepe officia voluptas, autem illo nesciunt repudiandae amet labore aliquid reprehenderit.</span>
            </div>
            <div class="col-sm-12 col-lg-1" >
-            <i style="font-size: 4rem;color:green;"  class="las la-map-marked-alt"></i>
+            <i style="font-size: 4rem;color:#009273;"  class="las la-map-marked-alt"></i>
            </div>
            <div class="col-sm-12 col-lg-5"  >
             <span>

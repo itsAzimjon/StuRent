@@ -3,8 +3,8 @@
 @section('content')
 <style>
     .form-check-input:checked {
-    background-color: green;
-    border-color: green;
+    background-color: #009273;
+    border-color: #009273;
     }
 </style>
 <section class="pt-100 pb-100 section--bg">
@@ -64,7 +64,7 @@
                         </div>
                        <div class="form-group col-lg-12 text-center" >
 
-                            <div style="background:green; color: white;font-size:1.5rem;width:40px; height:40px;" id="rasm_b"><i class="las la-plus"></i></div>
+                            <div style="background:#009273; color: white;font-size:1.5rem;width:40px; height:40px;" id="rasm_b"><i class="las la-plus"></i></div>
                        </div>
                         <div class="form-group col-lg-8">
                         </div>

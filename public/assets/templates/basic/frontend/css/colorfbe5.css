@@ -8,7 +8,7 @@
 }
 
 .btn--base, .btn--base:hover, .property-card__thumb .property-badge, .subscribe-form .subscribe-form-btn, .footer-widget .social-link-list li a, .card-view-btn-area button.active, .pagination .page-item.active .page-link, .custom-file-upload::after, .property-card__thumb .property-badge::after, .custom--nav-tabs.style--two .nav-item .nav-link.active::after, .blog-details__thumb .post__date .date, .sidebar .widget .widget__title::after, .custom--accordion .accordion-button:not(.collapsed), .preloader .preloader-container .animated-preloader, .preloader .preloader-container .animated-preloader:before, .select2-container--default .select2-results__option--highlighted[aria-selected], .details-thumb-slider .slick-arrow:hover, .blog-details__footer .social__links li a:hover {
-    background-color: green;
+    background-color: #009273;
 }
 .property-card__thumb .property-badge::before {
     border-color: transparent #e9e62cef transparent transparent;

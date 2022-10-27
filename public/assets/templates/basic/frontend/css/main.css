@@ -140,7 +140,7 @@ a:hover {
     color: #868e96 !important;
 }
 .text--success {
-    color: #28c76f !important;
+    color: #009273 !important;
 }
 .text--danger {
     color: #ea5455 !important;
@@ -171,7 +171,7 @@ a:hover {
     background-color: #868e96 !important;
 }
 .bg--success {
-    background-color: #28c76f !important;
+    background-color: #009273 !important;
 }
 .bg--danger {
     background-color: #ea5455 !important;
@@ -1346,7 +1346,7 @@ button:focus {
     background-color: #78818a;
 }
 .btn--success {
-    background-color: #28c76f;
+    background-color: #009273;
 }
 .btn--success:hover {
     background-color: #24b263;
@@ -1424,11 +1424,11 @@ button:focus {
     color: #ffffff;
 }
 .btn-outline--success {
-    color: #28c76f;
-    border-color: #28c76f;
+    color: #009273;
+    border-color: #009273;
 }
 .btn-outline--success:hover {
-    background-color: #28c76f;
+    background-color: #009273;
     color: #ffffff;
 }
 .btn-outline--danger {
@@ -1572,8 +1572,8 @@ button:focus {
 }
 .badge--success {
     background-color: rgba(40, 199, 111, 0.15);
-    border: 1px solid #28c76f;
-    color: #28c76f;
+    border: 1px solid #009273;
+    color: #009273;
 }
 .badge--danger {
     background-color: rgba(234, 84, 85, 0.15);

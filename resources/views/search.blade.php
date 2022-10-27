@@ -70,7 +70,7 @@
     <div class="row">
       <div class="col-lg-3 mb-lg-0 mb-3">
         <button class="action-sidebar-open">
-          <i class="las la-sliders-h"></i><font style="color: green">{{__("key.qulay")}}</font>  {{__("key.filter")}}
+          <i class="las la-sliders-h"></i><font style="color: #009273">{{__("key.qulay")}}</font>  {{__("key.filter")}}
         </button>
         <div class="action-sidebar">
           <button class="action-sidebar-close">
@@ -85,7 +85,7 @@
           <input type="hidden" name="shaxar_id" id="{{$shaxar_id??0}}">
           <input type="hidden" name="mahalla_id" id="{{$mahalla_id??0}}">
             <div class="action-widget mt-4">
-              <h6 class="action-widget__title"><font style="color: green">{{__("key.qulay")}}</font>  {{__("key.filter")}}</h6>
+              <h6 class="action-widget__title"><font style="color: #009273">{{__("key.qulay")}}</font>  {{__("key.filter")}}</h6>
               <div class="action-widget__body">
                 @foreach($category as $c)
                   <div class="form-check custom--checkbox">
@@ -108,7 +108,7 @@
             </div>
 
             <div class="action-widget mt-4">
-              <h6 class="action-widget__title"><font style="color: green">{{__("key.qulay")}}</font>  {{__("key.filter")}}</h6>
+              <h6 class="action-widget__title"><font style="color: #009273">{{__("key.qulay")}}</font>  {{__("key.filter")}}</h6>
               <div class="action-widget__body">
                 <div class="form-check custom--radio">
                   <input
@@ -137,7 +137,7 @@
               </div>
             </div>
             <div class="action-widget mt-4">
-              <h6 class="action-widget__title"><font style="color: green">{{__("key.qulay")}}</font>  {{__("key.filter")}}</h6>
+              <h6 class="action-widget__title"><font style="color: #009273">{{__("key.qulay")}}</font>  {{__("key.filter")}}</h6>
               <div class="action-widget__body">
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="kimga" id="kim2" value="2">
@@ -155,7 +155,7 @@
               </div>
             </div>
             <div class="action-widget mt-4">
-              <h6 class="action-widget__title"><font style="color: green">{{__("key.narxlar")}}</font>  {{__("key.filter")}}</h6>
+              <h6 class="action-widget__title"><font style="color: #009273">{{__("key.narxlar")}}</font>  {{__("key.filter")}}</h6>
               <div class="action-widget__body">
                 <div class="row">
                   <div class="col-6">
@@ -223,13 +223,13 @@
                     @foreach(json_decode($elon->rasm) as $ra)
                     @if($aa++==0)
                     <div class="carousel-item active">
-                      <img src="{{ asset($ra)}}" class="d-block w-100" alt="image" style="object-fit: contain;
-                      height: 200px;">
+                      <img src="{{ asset($ra)}}" class="d-block w-100" alt="image" style="object-fit: cover;
+                      width:100%;">
                     </div>
                     @else
                     <div class="carousel-item ">
-                      <img src="{{ asset($ra)}}" class="d-block w-100" alt="image" style="object-fit: contain;
-                      height: 200px;">
+                      <img src="{{ asset($ra)}}" class="d-block w-100" alt="image" style="object-fit: cover;
+                      width:100%;">
                     </div>
                     @endif
                     @endforeach
@@ -252,7 +252,7 @@
                 @endif
               </div>
               <a
-            href="/elon/{{$elon->id}}" style="colo:#373e4a;"
+            href="/elon/{{$elon->id}}" style="colo:#373e4a;width:100%;"
             >
               <div class="property-card__content">
                 <div class="property-card__details">
@@ -260,16 +260,16 @@
                    {{$elon->izoh}}
                   </h4>
                   <p class="location" style="color:#373e4a;">
-                    <i style="color: green" class="las la-map-marked-alt"></i>{{lang($elon->shaxar->name,__('key.lang'))}} {{lang($elon->mahalla->name,__('key.lang'))}}
+                    <i style="color: #009273" class="las la-map-marked-alt"></i>{{lang($elon->shaxar->name,__('key.lang'))}} {{lang($elon->mahalla->name,__('key.lang'))}}
                   </p>
                 </div>
                 <ul class="row">
-                  <li class="col-12" >
-                    <i style="color: green" class="las la-hourglass"></i>
+                  <li class="col-6" >
+                    <i style="color: #009273" class="las la-hourglass"></i>
                     <span style="color:#373e4a;">{{ \Carbon\Carbon::parse($elon->created_at)->format('d.m.Y')}}</span>
                   </li>
-                  <li class="col-12" style="color:#373e4a;">
-                    <i style="color: green" class="las la-money-bill"></i><span style="color: blue;">{{$elon->narx}} </span> so'm
+                  <li class="col-6" style="color:#373e4a;">
+                    <i style="color: #009273" class="las la-money-bill"></i><span style="color: blue;">{{$elon->narx}}</span>sum
                   </li>
                 </ul>
               </div>

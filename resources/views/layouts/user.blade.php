@@ -125,7 +125,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6 text-center">
                 <h2 class="page-title">
-                    {{__('key.home1')}} <font style="color: green"> {{__('key.home2')}}</font>
+                    {{__('key.home1')}} <font style="color: #009273 "> {{__('key.home2')}}</font>
                 </h2>
                 
                 </div>

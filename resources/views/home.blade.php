@@ -84,16 +84,16 @@
                    {{$elon->izoh}}
                   </h4>
                   <p class="location" style="color:#373e4a;">
-                    <i style="color: green" class="las la-map-marked-alt"></i>{{lang($elon->shaxar->name,__('key.lang'))}} {{lang($elon->mahalla->name,__('key.lang'))}}
+                    <i style="color: #009273" class="las la-map-marked-alt"></i>{{lang($elon->shaxar->name,__('key.lang'))}} {{lang($elon->mahalla->name,__('key.lang'))}}
                   </p>
                 </div>
                 <ul class="row">
                   <li class="col-12" >
-                    <i style="color: green" class="las la-hourglass"></i>
+                    <i style="color: #009273" class="las la-hourglass"></i>
                     <span style="color:#373e4a;">{{ \Carbon\Carbon::parse($elon->created_at)->format('d.m.Y')}}</span>
                   </li>
                   <li class="col-12" style="color:#373e4a;">
-                    <i style="color: green" class="las la-money-bill"></i><span style="color: blue;">{{$elon->narx}} </span> so'm
+                    <i style="color: #009273" class="las la-money-bill"></i><span style="color: blue;">{{$elon->narx}} </span> so'm
                   </li>
                 </ul>
               </div>
