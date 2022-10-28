@@ -86,7 +86,7 @@ class HomeController extends Controller
             'shaxar_id'=>$request->shaxar_id,
             'user_id'=>$request->user()->id,
         ];
-        $elon=Elon::create($daat);
+        $elon=Elon::create($date);
         foreach($request->malumot??[] as $m){
             Malumotlar::create(['elon_id'=>$elon->id,'categories_id'=>$m]);
         }
