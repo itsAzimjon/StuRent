@@ -61,6 +61,8 @@ return [
     'sorov2'=>"And I couldn't find my tenants",
     'sorov3'=>"I managed to find tenants, but not completely",
     'uy'=>"Apartments",
-    'faol'=>"It's in the ad"
+    'faol'=>"It's in the ad",
+    'ta'=>" student is needed"
+
 
 ];

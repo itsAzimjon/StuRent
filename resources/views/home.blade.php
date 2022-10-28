@@ -27,10 +27,8 @@
 
         <div class="row gy-3 card-view-area grid-view">
           @foreach($elons as $elon)
-          <div class="col-xl-3 col-md-6 card-view">
-            <a
-            href="/elon/{{$elon->id}}" style="color:#373e4a;"
-            >
+            <div class="col-xl-3 col-md-6 card-view" onclick="asl_href({{$elon->id}})" style="z-index: 1;">
+            
               <div class="property-card">
                 <div class="property-card__thumb" style="overflow: hidden;">
                   <div id="carouselExampleControls{{$elon->id}}" class="carousel slide" data-bs-ride="carousel"  data-bs-interval="false" style="height: 200px">
@@ -98,10 +96,7 @@
                   </ul>
                 </div>
               </div>
-          </a>
-
-          </div>
-          
+            </div>
           @endforeach
         </div>
       </div>
@@ -153,4 +148,9 @@
   </div>
 </div>
 @endforeach
+<script>
+  function asl_href(id){
+    window.location.href = "/elon/"+id
+  }
+</script>
 @stop

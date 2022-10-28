@@ -61,7 +61,8 @@ return [
     'sorov2'=>"Yoq men ijarachilarimni topa olmadim",
     'sorov3'=>"Ijarachilarni topa oldim lekin to’liq emas",
     'uy'=>"Kvaratiralar",
-    'faol'=>"Elonda bor"
+    'faol'=>"Elonda bor",
+    'ta'=>" ta talaba kerak"
 
 
 

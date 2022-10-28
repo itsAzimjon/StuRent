@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Image;
 
 use App\Category;
 use App\Shaxar;
@@ -34,6 +35,15 @@ class HomeController extends Controller
     }
     public function save(Request $request)
     {
+        // foreach($request->rasm as $rasm){
+            
+            // $image = Image::make($request->rasm2);
+            // $imageName = time().'-'.$request->rasm2->getClientOriginalName();
+            // $destinationPath = public_path('rasmlar/');
+            // $image->resize($image->width()/2,$image->height()/2);
+            // $image->save($destinationPath.$imageName);
+            // dd();
+        // }
         $this->validate($request,[
             'mulk_turi'=> 'required',
             'mahalla_id'=> 'required',
@@ -49,14 +59,19 @@ class HomeController extends Controller
         // dd($request->rasm);
         $rr=[];
         foreach($request->rasm as $rasm){
-            $name= time().$rasm->getClientOriginalName();
-            $a =  $rasm->move(public_path('rasmlar/'.$request->user()->id."/"), $name);
-            $rr[]="rasmlar/".$request->user()->id."/".$name;
-
+            if(!in_array($rasm->getClientOriginalExtension(),['png','jpg','jpeg'])){
+                return back()->withErrors(['rasm'=>'Rasm kata hajmli']);
+            }
+            $image = Image::make($rasm);
+            $imageName = time().'-'.$rasm->getClientOriginalName();
+            $destinationPath = public_path('rasmlar/');
+            $image->resize($image->width()/2,$image->height()/2);
+            $image->save($destinationPath.$imageName);
+            $rr[]="rasmlar/".$imageName;
         }
-        
-        // dd(json_encode($rr));
-        $name=[
+
+
+        $data=[
             'mulk_turi'=>$request->mulk_turi,
             'mahalla_id'=>$request->mahalla_id,
             'talaba_soni'=>$request->talaba_soni,
@@ -71,7 +86,7 @@ class HomeController extends Controller
             'shaxar_id'=>$request->shaxar_id,
             'user_id'=>$request->user()->id,
         ];
-        $elon=Elon::create($name);
+        $elon=Elon::create($daat);
         foreach($request->malumot??[] as $m){
             Malumotlar::create(['elon_id'=>$elon->id,'categories_id'=>$m]);
         }
@@ -119,7 +134,7 @@ class HomeController extends Controller
         ];
         $elon=Elon::where('id',$id)->update($name);
         Malumotlar::where('elon_id',$id)->delete();
-        foreach($request->malumot as $m){
+        foreach($request->malumot??[] as $m){
             Malumotlar::create(['elon_id'=>$id,'categories_id'=>$m]);
         }
         return redirect('/home');

@@ -215,7 +215,7 @@
           @foreach($elons as $elon)
           <div class="col-xl-4 col-md-6 card-view">
           <a
-            href="/elon/{{$elon->id}}" style="colo:#373e4a;width:100%;"
+            href="/elon/{{$elon->id}}" style="color:#373e4a;"
             >
             <div class="property-card">
               <div class="property-card__thumb" style="overflow: hidden;">
@@ -274,8 +274,9 @@
                 </ul>
               </div>
             </div>
-          </div>
           </a>
+
+          </div>
 
           @endforeach
         </div>

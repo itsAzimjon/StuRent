@@ -86,7 +86,7 @@
                         </div>
                         <div class="form-group col-lg-8" id="#">
                             <div class="row">
-                                @foreach(json_decode($elon->rasm) as $key=> $rasm)
+                                @foreach(json_decode($elon->rasm)??[] as $key=> $rasm)
                                 <div class="col-4" style="position: relative;">
                                     <img src="{{asset($rasm)}}" alt="">
                                     <div style="font-size: 12px;
@@ -180,7 +180,7 @@
                                         {{lang($c->name,__('key.lang'))}}
                                     </label>
                                     <input
-                                    @if(!empty($elon->malumoti))
+                                    @if(gettype(json_decode($elon->malumoti))=='array')
                                     @if(in_array($c->id,json_decode($elon->malumoti)))
                                     checked 
                                     @endif
@@ -215,7 +215,7 @@
                         <div class="form-group col-lg-12">
                             <label>Ijarachi talablari <sup class="text--danger">*</sup></label>
                             <textarea name="izoh" placeholder="Qolib ketgan narsalarni yozib qoldiring"
-                                class="form--control" required=""  >{{$elon->izoh}}</textarea>
+                                class="form--control"  >{{$elon->izoh}}</textarea>
                         </div>
                         <div class="col-lg-12">
                             <button type="submit" class="btn btn--base">Submit Now</button>

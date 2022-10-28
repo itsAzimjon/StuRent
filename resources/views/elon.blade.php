@@ -6,8 +6,8 @@
 
   <div class="container pt-50">
     <div class="row">
-      <div class="col-10 offset-1" style="    background-color: #fff;border-radius: 10px;box-shadow: 0 0 2px 0 rgb(0 0 0 / 10%);border: 1px solid #e5e5e5;">
-        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="max-height: 400px;overflow: hidden;">
+      <div class="col-md-5 col-12" style="    background-color: #fff;border-radius: 10px;box-shadow: 0 0 2px 0 rgb(0 0 0 / 10%);border: 1px solid #e5e5e5;">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" >
           <div class="carousel-inner">
             <?php $aa=0;?>
             @foreach(json_decode($elon->rasm) as $ra)
@@ -33,6 +33,9 @@
             <span class="visually-hidden">Next</span>
           </button>
         </div>
+        
+      </div>
+      <div class=" col-12 col-md-6 offset-md-1"  style="    background-color: #fff;border-radius: 10px;box-shadow: 0 0 2px 0 rgb(0 0 0 / 10%);border: 1px solid #e5e5e5;">
         <div class="property-card__content">
           <div class="property-card__details">
             <div class="row">
@@ -104,6 +107,8 @@
                   @else
                     {{__('key.qizlar')}}
                   @endif
+                  <br>
+                  {{$elon->talaba_soni}} {{__('key.ta')}}
                 </label>
               </div>
               <div class="col-md-4 col-12">
@@ -152,12 +157,11 @@
               @endif
               <br>
             </h4> --}}
-         
+        
           </div>
           
         </div>
       </div>
-      
     </div>
   </div>
 </section>
