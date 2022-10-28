@@ -154,7 +154,7 @@
                         <div class="form-group col-lg-12">
                             <label>Ijarachi talablari <sup class="text--danger">*</sup></label>
                             <textarea name="izoh" placeholder="Qolib ketgan narsalarni yozib qoldiring"
-                                class="form--control" required=""></textarea>
+                                class="form--control" ></textarea>
                         </div>
                         <div class="col-lg-12">
                             <button type="submit" class="btn btn--base">Submit Now</button>

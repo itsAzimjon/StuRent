@@ -214,7 +214,9 @@
         <div class="row gy-4 card-view-area grid-view">
           @foreach($elons as $elon)
           <div class="col-xl-4 col-md-6 card-view">
-            
+          <a
+            href="/elon/{{$elon->id}}" style="colo:#373e4a;width:100%;"
+            >
             <div class="property-card">
               <div class="property-card__thumb" style="overflow: hidden;">
                 <div id="carouselExampleControls{{$elon->id}}" class="carousel slide" data-bs-interval="false" data-bs-ride="carousel" style="height: 200px">
@@ -251,9 +253,7 @@
                 <div class="property-status"> {{__('key.qizlar')}}</div>
                 @endif
               </div>
-              <a
-            href="/elon/{{$elon->id}}" style="colo:#373e4a;width:100%;"
-            >
+             
               <div class="property-card__content">
                 <div class="property-card__details">
                   <h4 class="title mt-2">
@@ -273,9 +273,10 @@
                   </li>
                 </ul>
               </div>
-            </a>
             </div>
           </div>
+          </a>
+
           @endforeach
         </div>
         

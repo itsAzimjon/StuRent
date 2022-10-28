@@ -180,8 +180,10 @@
                                         {{lang($c->name,__('key.lang'))}}
                                     </label>
                                     <input
+                                    @if(!empty($elon->malumoti))
                                     @if(in_array($c->id,json_decode($elon->malumoti)))
                                     checked 
+                                    @endif
                                     @endif
                                     class="form-check-input" type="checkbox" value="{{$c->id}}" id="malumot{{$c->id}}" name="malumot[]">
 

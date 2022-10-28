@@ -131,7 +131,7 @@
                   <a href="/search" class="btn btn-sm btn--success w-100">{{__('key.search')}}</a>
                 </li>
                 <li>
-                  <a class="btn btn-sm btn--success w-100">{{__('key.elon')}}</a>
+                  <a href="/add" class="btn btn-sm btn--success w-100">{{__('key.elon')}}</a>
                 </li>
               </ul>
             </div>

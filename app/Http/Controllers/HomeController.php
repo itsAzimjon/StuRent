@@ -43,11 +43,8 @@ class HomeController extends Controller
             'rasm'=> 'required',
             'kimga'=> 'required',
             'shaxar_id'=> 'required',
-            'izoh'=> 'required',
             'name'=> 'required',
             'phone'=> 'required',
-            'malumot'=> 'required',
-           
         ]);
         // dd($request->rasm);
         $rr=[];
@@ -67,15 +64,15 @@ class HomeController extends Controller
             'xona_soni'=>$request->xona_soni,
             'rasm'=>json_encode($rr),
             'kimga'=>$request->kimga,
-            'malumoti'=>json_encode($request->malumot),
+            'malumoti'=>json_encode($request->malumot??""),
             'phone'=>$request->phone,
             'name'=>$request->name,
-            'izoh'=>$request->izoh,
+            'izoh'=>$request->izoh??" ",
             'shaxar_id'=>$request->shaxar_id,
             'user_id'=>$request->user()->id,
         ];
         $elon=Elon::create($name);
-        foreach($request->malumot as $m){
+        foreach($request->malumot??[] as $m){
             Malumotlar::create(['elon_id'=>$elon->id,'categories_id'=>$m]);
         }
 
@@ -91,10 +88,8 @@ class HomeController extends Controller
             'xona_soni'=> 'required',
             'kimga'=> 'required',
             'shaxar_id'=> 'required',
-            'izoh'=> 'required',
             'name'=> 'required',
             'phone'=> 'required',
-            'malumot'=> 'required',
            
         ]);
         $elon=Elon::where('id',$id)->first();
@@ -115,10 +110,10 @@ class HomeController extends Controller
             'xona_soni'=>$request->xona_soni,
             'rasm'=>json_encode($rr),
             'kimga'=>$request->kimga,
-            'malumoti'=>json_encode($request->malumot),
+            'malumoti'=>json_encode($request->malumot)??"",
             'phone'=>$request->phone,
             'name'=>$request->name,
-            'izoh'=>$request->izoh,
+            'izoh'=>$request->izoh??"",
             'shaxar_id'=>$request->shaxar_id,
             'user_id'=>$request->user()->id,
         ];
