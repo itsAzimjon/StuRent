@@ -29,10 +29,11 @@ Route::middleware([LangMiddleware::class])->group(function () {
     Route::get('/', function () {
         return view('welcome');
     });
-    Route::post('/search',  'UserController@search');
-    Route::post('/search/city',  'UserController@search_city');
+    Route::any('/search',  'UserController@search');
+    // Route::post('/sear   ch/city',  'UserController@search_city');
+    Route::any('/search/city',  'UserController@search_city');
     Route::get('/elon/{id}',  'UserController@elon');
-    Route::get('/search',  'UserController@search');
+    // Route::get('/search',  'UserController@search');
     Auth::routes(['login'=>false]);
 
     Route::get('/home', 'HomeController@index')->name('home');

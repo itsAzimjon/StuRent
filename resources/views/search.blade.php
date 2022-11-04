@@ -18,8 +18,10 @@
                   <option value=""> {{__('key.choose')}}</option>
                   @foreach($shaxar as $c)
                   <option
-                    @if($shaxar_id??"0"==$c->id)
+                    @if(!empty($shaxar_id))
+                    @if($shaxar_id==$c->id)
                     selected 
+                    @endif
                     @endif
                     value="{{$c->id}}"
                     data-locations='{{json_encode($c->mahalla)}}'
@@ -34,9 +36,11 @@
                   <option value="" selected disabled> {{__('key.choose')}}</option>
                   @foreach($mahalla??[] as $c)
                   <option
-                    @if($mahalla_id??"0"==$c->id)
+                    @if(!empty($mahalla_id))
+                    @if($mahalla_id==$c->id)
                     selected 
                     @endif
+                    @endif  
                     value="{{$c->id}}"
                   >
                     {{lang($c->name,__('key.lang'))}}
@@ -77,13 +81,13 @@
             <i class="las la-times"></i>
           </button>
           <form
-            action="?"
+            action="/search"
             method="post"
             class="search-form"
           >
           @csrf
-          <input type="hidden" name="shaxar_id" id="{{$shaxar_id??0}}">
-          <input type="hidden" name="mahalla_id" id="{{$mahalla_id??0}}">
+          <input type="hidden" name="shaxar_id" value="{{$shaxar_id??0}}">
+          <input type="hidden" name="mahalla_id" value="{{$mahalla_id??0}}">
             <div class="action-widget mt-4">
               <h6 class="action-widget__title"><font style="color: #009273">{{__("key.qulay")}}</font>  {{__("key.filter")}}</h6>
               <div class="action-widget__body">
@@ -97,9 +101,9 @@
                       checked 
                       @endif
                       value="{{$c->id}}"
-                      id="{{$c->id}}"
+                      id="aa{{$c->id}}"
                     />
-                    <label class="form-check-label" for="{{$c->id}}">
+                    <label class="form-check-label" for="aa{{$c->id}}">
                         {{lang($c->name,__('key.lang'))}}
                     </label>
                   </div>

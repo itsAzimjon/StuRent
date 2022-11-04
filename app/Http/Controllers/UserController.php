@@ -14,6 +14,17 @@ class UserController extends Controller
         $category=Category::all();
         $Shaxar=Shaxar::with('mahalla')->get();
         $elon=Elon::where('type',0);
+        // dd($request);
+        if(!empty($request->shaxar_id) and $request->shaxar_id!=0){
+            $elon=$elon->whereHas('shaxar', function($q) use ($request){
+                $q->where('id',$request->shaxar_id);
+            });
+        }
+        if(!empty($request->mahalla_id) and $request->mahalla_id!=0){
+            $elon=$elon->whereHas('mahalla', function($q) use ($request){
+                $q->where('id',$request->mahalla_id);
+            });
+        }
         foreach($request->category??[] as $c){
             $elon = $elon->whereHas('qulaylik', function($q) use ($c){
                 $q->where('categories_id',$c);
@@ -26,10 +37,21 @@ class UserController extends Controller
         if(!empty($request->max_price))
             $elon=$elon->where('narx','<=',(int)$request->max_price);
         if(!empty($request->kimga))
-            $elon=$elon->where('kimga',$request->kimga)->orwhere('kimga',1);
+            $elon=$elon->where('kimga',$request->kimga);
         $elon = $elon->get();
         // dd($request->min_price);
-        return view('search',['category'=>$category,'shaxar'=>$Shaxar,'elons'=>$elon,'s_c'=>$request->category,'min'=>$request->min_price,'max'=>$request->max_price]);
+        return view('search',[
+            'category'=>$category,
+            'shaxar'=>$Shaxar,
+            'elons'=>$elon,
+            's_c'=>$request->category,
+            'min'=>$request->min_price,
+            'max'=>$request->max_price,
+            'mahalla'=>Mahalla::where('shaxar_id',$request->shaxar_id??0)->get(),
+            'shaxar_id'=>$request->shaxar_id??0,
+            'mahalla_id'=>$request->mahalla_id??0,
+            'kimga'=>$request->kimga
+        ]);
     }
     public function search_city(Request $request)
     {
@@ -43,16 +65,18 @@ class UserController extends Controller
                 $q->where('id',$request->mahalla_id);
             });
         foreach($request->category??[] as $c){
-            $elon =  $elon->whereHas('qulaylik', function($q) use ($c){
-                $q->where('id',$c);
+            $elon = $elon->whereHas('qulaylik', function($q) use ($c){
+                $q->where('categories_id',$c);
             });
         }
         if(!empty($request->mulk_turi))
             $elon=$elon->where('mulk_turi',$request->mulk_turi);
         if(!empty($request->min_price))
-            $elon=$elon->where('narx','>=',$request->min_price);
+            $elon=$elon->where('narx','>=',(int)$request->min_price);
         if(!empty($request->max_price))
-            $elon=$elon->where('narx','<=',$request->max_price);
+            $elon=$elon->where('narx','<=',(int)$request->max_price);
+        if(!empty($request->kimga))
+            $elon=$elon->where('kimga',$request->kimga);
         $elon =  $elon->get();
         return view('search',[
             'category'=>$category,
@@ -64,6 +88,8 @@ class UserController extends Controller
             'min'=>$request->min_price,
             'max'=>$request->max_price,
             's_c'=>$request->category,
+            'kimga'=>$request->kimga
+
         ]);
     }
     public function add(Request $request)
