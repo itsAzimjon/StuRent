@@ -147,7 +147,8 @@
                             </div>
                             <div class="form-group col-lg-3">
                                 <label>Telefon nomeri <sup class="text--danger">*</sup></label>
-                                <input type="text" name="phone" autocomplete="off" value=""
+                                <p style="position: absolute;margin:11px">+998</p>
+                                <input style="padding-left: 48px;" type="text" name="phone" autocomplete="off" value=""
                                     placeholder="Telefon" class="form--control" required="">
                             </div>
                         </div>
@@ -157,7 +158,7 @@
                                 class="form--control" ></textarea>
                         </div>
                         <div class="col-lg-12">
-                            <button type="submit" class="btn btn--base">Submit Now</button>
+                            <button type="submit" class="btn btn--base">{{__('key.submit')}}</button>
                         </div>
                     </div>
                 </form>

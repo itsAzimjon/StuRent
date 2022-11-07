@@ -17,7 +17,9 @@ return [
     'about'=>'About',
     'search'=>'Search',
     'home1'=>'Rent houses ',
-    'home2'=>"for students!!",
+    'home2'=>"for students!",
+    'home3'=>"Discover comfort for yourself",
+    'about_us'=>"About us",
     'elon'=>"Announcement",
     'choose'=>"Choose",
     'result_count'=>"Number of results",
@@ -52,7 +54,8 @@ return [
     'qo_malumot'=>"Additional information",
     'ijara_malumot'=>"Information about the tenant",
     'elonlaringiz'=>"Your announcements",
-    'ijarachi_about'=>"About Rent ",
+    'ijarachi_about'=>"Tenant requirements",
+    'ijara_about'=>"About Rent ",
     'ijarachi'=>"Tenant Name",
     'ijarachi_tel'=>"Tenant Phone",
     'kimga'=>"For whom",
@@ -62,7 +65,8 @@ return [
     'sorov3'=>"I managed to find tenants, but not completely",
     'uy'=>"Apartments",
     'faol'=>"It's in the ad",
-    'ta'=>" student is needed"
+    'ta'=>" student is needed",
+    'submit'=>"Submit now",
 
 
 ];
