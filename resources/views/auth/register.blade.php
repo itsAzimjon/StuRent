@@ -43,36 +43,42 @@
     <div class="page-wrapper default-version">
         <div class="form-area bg_img" style="background: white;">
             <div class="form-wrapper">
-                <h4 class="logo-text mb-15">Hush kelibsiz <strong></strong></h4>
-                <p>Ro‘yxatdan o‘tish</p>
-                <form action="#" method="POST" class="cmn-form mt-30">
+                    <button class="backBtn d-lg-none" style="margin: -2px 0 0px -164px; position:absolute; z-index: 999; background: #e3ebf1; padding: .2em; border-radius: 12px; " onclick="history.back()">
+                      <svg width="29" height="29" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <path d="M15 18L9 12L15 6" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </button>
+                    <h4 class="logo-text mb-15">Hush kelibsiz <strong></strong></h4>
+                    <p>Ro‘yxatdan o‘tish</p>
+                    <form action="#" method="POST" class="cmn-form mt-30">
                     @csrf
                     <div class="form-group">
-                        <label for="name">Ismingizni kiriting</label>
+                        <label for="name">Ism</label>
                         <input type="text" name="name" class="form-control b-radius--capsule" id="name"  placeholder="Ismingiz" required>
                         <i class="las la-user input-icon"></i>
                         
                     </div>
                     <div class="form-group">
-                        <label for="email">Tel (901234567)</label>
-                        <input required type="number" maxlength="9" name="email" class="form-control b-radius--capsule" id="username" value="admin" placeholder="Telefon">
+                        <label for="email">Telefon raqam</label>
+                        <p style="position: absolute; top: 38px; left: 19px;}">+998</p>
+                        <input style="padding: 10px 56px;" required type="number" maxlength="9" name="email" class="form-control b-radius--capsule" id="username" placeholder="Telefon">
                         <i class="las la-user input-icon"></i>
                         
                     </div>
                     <div class="form-group">
                         <label for="pass">Parol</label>
-                        <input required type="password" name="password" class="form-control b-radius--capsule" id="pass" value="admin" placeholder="Parol">
+                        <input required type="password" name="password" class="form-control b-radius--capsule" id="pass" placeholder="Parol">
                         <i class="las la-lock input-icon"></i>
                        
                     </div>
                     <div class="form-group">
                         <label for="pass">Qayta Parol</label>
-                        <input required type="password" name="password_confirmation" class="form-control b-radius--capsule" id="pass" value="admin" placeholder="Parol">
+                        <input required type="password" name="password_confirmation" class="form-control b-radius--capsule" id="pass" placeholder="Parol">
                         <i class="las la-lock input-icon"></i>
                     </div>
                     <div class="form-group d-flex justify-content-between align-items-center">
                         <a href="/reset" class="text-muted text--small"><i class="las la-lock"></i>Parolni unutdingizmi</a>
-                        <a href="/login" class="text-muted text--small"><i class="las la-phone"></i>Ro'yxatdan o'tganman</a>
+                        <a style="color: #009273;" href="/login" class="text--small"><i class="las la-phone"></i>Ro'yxatdan o'tganman</a>
                     </div>
                     <div class="form-group">
                         <button type="submit" class="submit-btn mt-25 b-radius--capsule">Ro‘yxatdan o‘tish <i class="las la-sign-in-alt"></i></button>

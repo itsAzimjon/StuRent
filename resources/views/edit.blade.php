@@ -207,6 +207,7 @@
                                     placeholder="Ismi" class="form--control" required="">
                             </div>
                             <div class="form-group col-lg-3">
+                                <p style="position: absolute; top: 38px; left: 19px;}">+998</p>
                                 <label>Telefon nomeri <sup class="text--danger">*</sup></label>
                                 <input type="text" name="phone" value="{{$elon->phone}}" autocomplete="off" value=""
                                     placeholder="Telefon" class="form--control" required="">

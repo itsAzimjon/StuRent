@@ -1,10 +1,15 @@
 /* reset css start */
-/* @import url("../../../../../../../external.html?link=https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500&amp;family=Quicksand:wght@300;400;500;600;700&amp;display=swap"); */
+@import url("https://cdn.rawgit.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css"); 
+
+*{
+    font-family: 'Gilroy', sans-serif;
+}
+
 html {
     scroll-behavior: smooth;
 }
 body {
-    font-family: "Maven Pro", sans-serif;
+    font-family: "Gilroy", sans-serif;
     color: #464646;
     font-size: 1rem;
     padding: 0;
@@ -48,7 +53,83 @@ body.page-trns-active::before {
     background-color: #002046;
     z-index: 99;
     opacity: 0.65;
+}.back-fit-img{
+    position: absolute;
+    z-index: -1;
+    height: 600px;
+    width: 100%;
+    top: 0;
+    object-fit: cover;
 }
+.home-btn{
+    width: 200px !important;
+    height: 52px;
+    font-size: 22px;
+}
+
+.phone-href{
+    padding: 0.57rem 1.875rem !important;
+    height:50px;
+}
+.all-elon-head{
+    font-size: 24px;
+}
+.add-stin{
+    color: #373e4a;
+    font-size: 251px;
+    background: #f5f5f5;
+    height: 135px;
+    width: 135px;
+    line-height: 0.55;
+    border-radius: 8%;
+    border: 1px solid;
+}
+
+.add-stin:hover{
+    color: #009273;
+}
+@media (max-width: 767px) {
+    .home-btn{
+        width: 164px !important;
+        height: 46px;
+        font-size: 18px;
+    }
+    .inner-page-hero .page-list {
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: center;
+        margin-top: 74px !important;
+    }
+    .about-us{
+        margin-top:0 !important;
+    }
+    .inner-page-hero .page-list li {
+        padding: 0 8px !important;
+    }
+    .back-fit-img{
+        object-position: 80% 100%;
+    }
+    .thb{
+        width: 90%;
+        margin-top: 97px;
+    }
+    .thp{
+        display: none;
+    }
+    .page-title {
+        font-size: 36px !important;
+        background: #fff;
+        padding: 18px;
+        border-radius: 12px;
+        line-height: 1.1;
+        
+    
+    }
+    .content-home{
+        margin-top: 30px;
+    }
+}
+
 @-webkit-keyframes spinRoll {
     from {
         -webkit-transform: rotate(0deg);
@@ -291,7 +372,7 @@ a:hover {
     font-size: 2rem;
 }
 .section-subtitle {
-    font-family: "Quicksand", sans-serif;
+    font-family: "Gilroy", sans-serif;
     font-size: 1rem;
     font-weight: 500;
 }
@@ -539,7 +620,7 @@ a.text-white:hover {
 }
 .caption-list li .caption {
     width: 30%;
-    font-family: "Quicksand", sans-serif;
+    font-family: "Gilroy", sans-serif;
     font-weight: 700;
     font-size: 0.875rem;
     position: relative;
@@ -574,7 +655,7 @@ a.text-white:hover {
     -o-border-radius: 5px;
 }
 .caption-list-two li {
-    font-family: "Quicksand", sans-serif;
+    font-family: "Gilroy", sans-serif;
     font-weight: 500;
     color: #373e4a;
     font-size: 0.875rem;
@@ -1282,7 +1363,7 @@ h6 {
     font-size: 1.125rem;
 }
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Quicksand", sans-serif;
+    font-family: "Gilroy", sans-serif;
     color: #373e4a;
     font-weight: 600;
     margin: 0;
@@ -1290,7 +1371,7 @@ h1, h2, h3, h4, h5, h6 {
     word-break: break-word;
 }
 h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a {
-    font-family: "Quicksand", sans-serif;
+    font-family: "Gilroy", sans-serif;
     color: #373e4a;
     font-weight: 600;
     -webkit-transition: all 0.3s;
@@ -1305,7 +1386,7 @@ p, li, span {
 a {
     text-decoration: none;
     display: inline-block;
-    font-family: "Maven Pro", sans-serif;
+    font-family: "Gilroy", sans-serif;
     font-weight: 400;
 }
 a:hover {
@@ -1349,7 +1430,7 @@ button:focus {
     background-color: #009273;
 }
 .btn--success:hover {
-    background-color: #24b263;
+    background: #009273;    
 }
 .btn--danger {
     background-color: #ea5455;
@@ -1557,7 +1638,7 @@ button:focus {
     padding: 0.625rem 1.25rem;
 }
 [class*="btn"].btn-sm {
-    padding: 0.375rem 0.625rem;
+    padding: 0.5rem 0.625rem;
 }
 /* button css end */
 .badge--primary {
@@ -1783,7 +1864,7 @@ button:focus {
     -moz-border-radius: 0;
     -ms-border-radius: 0;
     -o-border-radius: 0;
-    font-family: "Quicksand", sans-serif;
+    font-family: "Gilroy", sans-serif;
     border-bottom-color: #999999;
 }
 .form--control.style--two:focus {
@@ -2056,11 +2137,12 @@ label {
     }
 }
 .header .site-logo img {
-    width: 10.9375rem;
+    width: 8.5rem;
 }
 @media (max-width: 1199px) {
     .header .site-logo img {
-        max-width: 9.375rem;
+        max-width: 6.5rem;
+        margin-right: -36px;
     }
 }
 .header .main-menu {
@@ -2117,7 +2199,7 @@ label {
     color: #f05945;
 }
 .header .main-menu li a {
-    font-family: "Quicksand", sans-serif;
+    font-family: "Gilroy", sans-serif;
     font-weight: 500;
     text-transform: uppercase;
     padding: 1.5625rem 0.9375rem 1.5625rem 0;
@@ -2132,7 +2214,7 @@ label {
     }
 }
 .header .main-menu li a:hover, .header .main-menu li a:focus {
-    color: green;
+    color: #009273;
 }
 .header .main-menu li .sub-menu {
     position: absolute;
@@ -2257,6 +2339,7 @@ label {
     color: #000;
     height: 40px;
     padding: 10px;
+    padding-left: 0;
     border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 3px;
     -webkit-border-radius: 3px;
@@ -2265,12 +2348,12 @@ label {
     -o-border-radius: 3px;
 }
 .language-select option {
-    background-color: #009273;
-    color: #fff;
+    background-color: #98c0b7;
+    color: #000;
 }
 @media (max-width: 1199px) {
     .navbar-collapse {
-        background-color: #009273;
+        background-color: #98c0b7;
         padding: 0 1.875rem 1.25rem 1.875rem;
     }
 }
@@ -2513,7 +2596,7 @@ label {
 }
 
 .hero-list-item .price {
-    font-family: "Quicksand", sans-serif;
+    font-family: "Gilroy", sans-serif;
     font-weight: 700;
     font-size: 2.25rem;
     color: #fff;
@@ -2606,8 +2689,8 @@ label {
 /* hero section css end */
 /* inner-page-hero css start */
 .inner-page-hero {
-    padding-top: 140px;
-    padding-bottom: 60px;
+    padding-top: 170px;
+    padding-bottom: 80px;
     position: relative;
     z-index: 1;
     background-position-y: center;
@@ -2623,15 +2706,15 @@ label {
     opacity: 0.85;
     z-index: -1;
 } */
-.inner-page-hero .page-title {
+.page-title {
     font-weight: 600;
     color: #000;
+    font-size: 46px;
+    margin-top: 120px;
 }
 .inner-page-hero .page-list {
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
     margin-top: 15px;
 }
 .inner-page-hero .page-list li {
@@ -2699,14 +2782,15 @@ label {
     border-radius: 10px 10px 0 0;
 }
 .property-card__thumb .property-status {
-    font-size: 12px;
+    font-size: 13px;
     position: absolute;
     top: 10px;
     right: 10px;
-    padding: 0 10px;
+    padding: 4px 10px 2px 10px;
     background-color: #fff;
-    color: #777;
-    border-radius: 999px;
+    color: #009273;
+    border-radius: 9px;
+    font-weight: 600;
 }
 
 .property-card__thumb .property-badge {
@@ -2744,10 +2828,12 @@ label {
 }
 
 .property-card__content {
-    padding: 20px 15px 8px 15px;
+    padding: 20px 15px 12px 12px;
 }
 .property-card__content .title {
-    font-size: 1.05rem;
+    font-size: 22px;
+    line-height: 0.5;
+    margin-top: 15px;
 }
 
 .property-card__content .title a {
@@ -2806,7 +2892,7 @@ label {
 }
 
 .property-card .price {
-    font-family: "Quicksand", sans-serif;
+    font-family: "Gilroy", sans-serif;
     font-size: 1.5rem;
     font-weight: 600;
     color: #f05945;
@@ -2939,7 +3025,7 @@ label {
     margin-top: 1.25rem;
 }
 .new-list-card__footer .price {
-    font-family: "Quicksand", sans-serif;
+    font-family: "Gilroy", sans-serif;
     font-size: 1.5rem;
     font-weight: 600;
     color: #f05945;
@@ -3279,6 +3365,14 @@ blockquote {
 .comment-form input:focus, .comment-form textarea:focus {
     box-shadow: 0px 3px 18px 2px rgba(46, 25, 204, 0.16);
     border-color: transparent;
+}
+
+.form-check-input:checked {
+    background-color: #009273 !important;
+    border-color: #009273 !important;
+}
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.25rem rgb(13 253 168 / 25%);
 }
 /* blog-details-section css end */
 /* account section css start */
@@ -3642,7 +3736,7 @@ blockquote {
     color: #f05945;
 }
 .property-details-price {
-    font-family: "Quicksand", sans-serif;
+    font-family: "Gilroy", sans-serif;
     font-weight: 700;
     font-size: 2rem;
     color: #373e4a;
@@ -3769,7 +3863,7 @@ blockquote {
     padding-right: 0.9375rem;
 }
 .widget-card__content .widget-number {
-    font-family: "Quicksand", sans-serif;
+    font-family: "Gilroy", sans-serif;
     font-weight: 600;
     font-size: 1.75rem;
     line-height: 1.2;
@@ -4238,14 +4332,14 @@ blockquote {
 }
 @media (max-width: 991px) {
     .action-sidebar {
-        width: 350px;
+        width: 100%;
         position: fixed;
-        top: 75px;
+        top: 55px;
         left: -105%;
         z-index: 99999;
         max-width: 100%;
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
-        max-height: calc(100vh - 75px);
+        height: 2000px;
         overflow: auto;
         scrollbar-width: thin;
         scrollbar-color: darkgrey #e7e7e7;
@@ -4310,8 +4404,8 @@ blockquote {
     }
 }
 .action-sidebar-open {
-    padding: 0.5rem 1.5625rem;
-    background-color: #f05945;
+    height: 50px;
+    background-color: #fff;
     color: #fff;
     align-items: center;
     justify-content: center;
@@ -4321,6 +4415,24 @@ blockquote {
     -ms-border-radius: 3px;
     -o-border-radius: 3px;
     display: none;
+    position: absolute;
+    top: 200px;
+    border: 1px solid #009274;
+    width: 45%;
+    border-radius: 5px;
+    padding: 13px;
+}
+@media (min-width: 576px) and (max-width: 767px) {
+    .action-sidebar-open {
+        top: 136px !important;
+        width: 246px !important;
+    }
+}
+@media (min-width: 767px) {
+    .action-sidebar-open {
+        top: 394px !important;
+        width: 336px !important;
+    }
 }
 @media (max-width: 991px) {
     .action-sidebar-open {
