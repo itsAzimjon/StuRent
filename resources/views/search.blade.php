@@ -208,7 +208,6 @@
             <div class="card-view-btn-area">
               <button class="list-view-btn">
                 <i class="las la-bars"></i>
-                <i class="las la-bars"></i>
               </button>
               <button class="grid-view-btn active">
                 <i class="las la-th-large"></i>
@@ -289,7 +288,7 @@
 
                     <span style="color:#373e4a;">{{ \Carbon\Carbon::parse($elon->created_at)->format('d.m.Y')}}</span>
                   </li>
-                  <li class="col-6" style="color:#373e4a; font-size: 22px; line-height: 20px; letter-spacing: 0.6px; margin-top: 2px;">
+                  <li class="col-6" style="color:#373e4a; font-size: 20px; line-height: 20px; letter-spacing: 0.6px; margin-top: 2px;">
                     <!--<i style="color: #009273" class="las la-money-bill"></i>--><span style="float: right;"><b style="color: #009273;">{{$elon->narx}}</b>so‘m</span>
                   </li>
                 </ul>

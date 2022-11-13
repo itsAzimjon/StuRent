@@ -57,8 +57,9 @@
 
 
 
+                        <p>{{__('key.rasmlar')}} <sup class="text--danger">*</sup></p>
                         <div class="form-group col-lg-4" id="rasmlar_con">
-                            <label for="file">{{__('key.rasmlar')}} <sup class="text--danger">*</sup></label>
+                            <label for="file" class="img-lab">{{__('key.rasmlar')}}</label>
                             <input type="file" id="file"  name="rasm[]" class="form--control custom-file-upload"
                                 required accept="image/png, image/jpeg, image/jpg">
                         </div>
