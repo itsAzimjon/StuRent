@@ -9,6 +9,7 @@ use App\Mahalla;
 use App\Elon;
 class UserController extends Controller
 {
+    //user search updated
     public function search(Request $request)
     {
         $category=Category::all();
